@@ -79,12 +79,11 @@ test.subject: data set 'subject_test'
 
 For creating a tidy data set various transformations were necessary. It follows a list of all variables used in the R code:
 
-cols: using R function grep() relevant features 'mean()' and std()' are fixed
-
-filter.cols: using R function grep() columns for variable 'meanFreq()' are fixed
-filter.train: filter train.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols)
-filter.test: filter test.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols)
-train: merging train.subject, train.labels, filter.train by column binding to create one data set for the training dat
-test: merging test.subject, test.labels, filter.test by column binding to create one data set for the test dat
-merged.data: merging train and test by row binding to create one data set
-grp: grouping by columns subject and act.label leads to this tidy data set with 180 observations of 68 variables
+cols: using R function grep() relevant features 'mean()' and std()' are fixed.
+filter.cols: using R function grep() columns for variable 'meanFreq()' are fixed.
+filter.train: filter train.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols).
+filter.test: filter test.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols).
+train: merging train.subject, train.labels, filter.train by column binding to create one data set for the training data.
+test: merging test.subject, test.labels, filter.test by column binding to create one data set for the test data.
+merged.data: merging train and test by row binding to create one data set.
+grp: grouping by columns subject and act.label leads to this tidy data set with 180 observations of 68 variables.
