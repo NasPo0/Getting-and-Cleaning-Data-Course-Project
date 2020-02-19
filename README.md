@@ -2,7 +2,7 @@
 
 Scripts:
 ========
-The repository contains a R script 'run_analysis.R'. This script uses the data sets that are described in more detail below to create a tidy set which fulfill the following:
+The repository contains a R script 'run_analysis.R'. This script uses the data sets that are described in more detail below to create a tidy set which fulfills the following:
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -62,12 +62,6 @@ Notes:
 - Each feature vector is a row on the text file.
 
 For more information about this dataset contact: activityrecognition@smartlab.ws
-
-Scripts:
-========
-
-The repository contains a R script 'run_analysis.R'. This script uses the data sets from above to create a tidy set. 
-
 
 License:
 ========
