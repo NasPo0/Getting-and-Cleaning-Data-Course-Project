@@ -71,21 +71,21 @@ From data sets a tidy data set was created. Data sets used are as follows:
 
 The data sets are read into R. The data frames are named as follows:
 
-- features: data set 'features'
-- train.data: data set 'X_train'
-- train.labels: data set 'y_train'
-- train.subject: data set 'subject_train'
-- test.data: data set 'X_test'
-- test.labels: data set 'y_test'
-- test.subject: data set 'subject_test'
+- features: data frame of factor variables, data set 'features'
+- train.data: data frame of numeric variables, data set 'X_train'
+- train.labels: data frame of integers, data set 'y_train'
+- train.subject: data frame of integers, data set 'subject_train'
+- test.data: data frame of numeric variables, data set 'X_test'
+- test.labels: data frame of integers, data set 'y_test'
+- test.subject: data frame of integers, data set 'subject_test'
 
 For creating a tidy data set various transformations were necessary. It follows a list of all variables used in the R code:
 
-- cols: using R function grep() relevant features 'mean()' and std()' are fixed.
-- filter.cols: using R function grep() columns for variable 'meanFreq()' are fixed.
-- filter.train: filter train.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols).
-- filter.test: filter test.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols).
-- train: merging train.subject, train.labels, filter.train by column binding to create one data set for the training data.
-- test: merging test.subject, test.labels, filter.test by column binding to create one data set for the test data.
-- merged.data: merging train and test by row binding to create one data set.
-- grp: grouping by columns subject and act.label leads to this tidy data set with 180 observations of 68 variables.
+- cols: integer vector, using R function grep() relevant features 'mean()' and std()' are fixed.
+- filter.cols: integer vector, using R function grep() columns for variable 'meanFreq()' are fixed.
+- filter.train: data frame of numeric variables, filter train.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols).
+- filter.test: data frame of numeric variables, filter test.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols).
+- train: data frame with containing two integer variables (subject, act.label) and else numeric variables; merging train.subject, train.labels, filter.train by column binding to create one data set for the training data.
+- test: data frame with containing two integer variables (subject, act.label) and else numeric variables; merging test.subject, test.labels, filter.test by column binding to create one data set for the test data.
+- merged.data: data frame with containing two integer variables (subject, act.label) and else numeric variables; merging train and test by row binding to create one data set.
+- grp: data frame with containing two integer variables (subject, act.label) and else numeric variables; grouping by columns subject and act.label leads to this tidy data set with 180 observations of 68 variables.
