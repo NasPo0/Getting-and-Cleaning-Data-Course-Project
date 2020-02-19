@@ -56,4 +56,34 @@ tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
 
-The complete list of variables of each feature vector is available in 'features.txt'
+From data sets a tidy data set was created. Data sets used are as follows:
+
+features: List of all features.
+activity_labels: Links the class labels with their activity name.
+X_train: Training set.
+y_train: Training labels.
+subject_train: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+X_test: Test set.
+y_test: Test labels.
+subject_test: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
+
+The data sets are read into R. The data frames are named as follows:
+
+features: data set 'features'
+train.data: data set 'X_train'
+train.labels: data set 'y_train'
+train.subject: data set 'subject_train'
+test.data: data set 'X_test'
+test.labels: data set 'y_test'
+test.subject: data set 'subject_test'
+
+For creating a tidy data set various transformations were necessary. It follows a list of all variables used in the R code:
+
+cols: using R function grep() relevant features 'mean()' and std()' are fixed
+filter.cols: using R function grep() columns for variable 'meanFreq()' are fixed
+filter.train: filter train.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols)
+filter.test: filter test.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols)
+train: merging train.subject, train.labels, filter.train by column binding to create one data set for the training dat
+test: merging test.subject, test.labels, filter.test by column binding to create one data set for the test dat
+merged.data: merging train and test by row binding to create one data set
+grp: grouping by columns subject and act.label leads to this tidy data set with 180 observations of 68 variables
