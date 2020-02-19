@@ -80,6 +80,7 @@ test.subject: data set 'subject_test'
 For creating a tidy data set various transformations were necessary. It follows a list of all variables used in the R code:
 
 cols: using R function grep() relevant features 'mean()' and std()' are fixed
+
 filter.cols: using R function grep() columns for variable 'meanFreq()' are fixed
 filter.train: filter train.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols)
 filter.test: filter test.data by selected columns (using cols), data on 'meanFreq()' is removed (using filter.cols)
